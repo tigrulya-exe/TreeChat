@@ -2,7 +2,7 @@ package ru.nsu.manasyan.treechat.serialization
 
 import com.google.gson.Gson
 import ru.nsu.manasyan.treechat.ApplicationProperties
-import ru.nsu.manasyan.treechat.model.Packet
+import ru.nsu.manasyan.treechat.data.Packet
 
 class GsonPacketSerializer(
     private val properties: ApplicationProperties
