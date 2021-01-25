@@ -1,7 +1,6 @@
 package ru.nsu.manasyan.treechat.network
 
 import ru.nsu.manasyan.treechat.ApplicationProperties
-import ru.nsu.manasyan.treechat.controller.ApplicationController
 import ru.nsu.manasyan.treechat.controller.PacketQueue
 import ru.nsu.manasyan.treechat.data.Packet
 import ru.nsu.manasyan.treechat.data.PacketContext
