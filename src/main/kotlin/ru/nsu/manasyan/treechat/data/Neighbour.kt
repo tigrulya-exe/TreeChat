@@ -1,9 +1,11 @@
 package ru.nsu.manasyan.treechat.data
 
 import java.net.InetSocketAddress
+import java.util.*
 
 class Neighbour(
-    val alternate: Alternate = Alternate.Me,
     val address: InetSocketAddress,
-    val isFresh: Boolean = true
-)
+    var alternate: Alternate? = null,
+    var isAlive: Boolean = true,
+    uuid: UUID = UUID.randomUUID()
+): Identifiable(uuid)

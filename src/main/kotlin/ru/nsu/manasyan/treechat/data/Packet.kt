@@ -1,13 +1,14 @@
 package ru.nsu.manasyan.treechat.data
 
+import java.net.InetSocketAddress
 import java.util.*
 
 class Packet(
-    val GUID: UUID = UUID.randomUUID(),
     val type: Type,
-    val userName: String?,
-    val payload: ByteArray?,
-) {
+    uuid: UUID = UUID.randomUUID(),
+    val data: ByteArray? = null,
+    val userName: String? = null,
+): Identifiable(uuid) {
     enum class Type {
         ACK,
         HELLO,
@@ -15,3 +16,8 @@ class Packet(
         MESSAGE
     }
 }
+
+data class PacketContext(
+    val packet: Packet,
+    val address: InetSocketAddress
+)
